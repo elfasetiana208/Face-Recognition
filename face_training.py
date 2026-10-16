@@ -12,7 +12,7 @@ def orgnizerDataset(path="dataset/"):
     faces = []
     ids = np.array([], dtype="int")
     for i in imagePath:
-        img - cv2.cvtColor(cv2.imread(i), cv2.COLOR_BGR2GRAY)
+        img = cv2.cvtColor(cv2.imread(i), cv2.COLOR_BGR2GRAY)
         id = int(os.path.split(i)[-1].split("_")[1])
         face = faceCascade.detectMultiScale(img)
         for (x, y, w, h) in face:
